@@ -699,6 +699,7 @@ export default class Gantt {
             bars.forEach(bar => {
                 const $bar = bar.$bar;
                 $bar.finaldx = this.get_snap_position(dx);
+                if(typeof bar.task.read_only !== 'undefined' && bar.task.read_only === true){ return; }
                 this.hide_popup();
                 if (is_resizing_left) {
                     if (parent_bar_id === bar.task.id) {
