@@ -1685,11 +1685,11 @@ class Gantt {
             const bar_wrapper = $.closest('.bar-wrapper', element);
 
             if (element.classList.contains('left')) {
-                is_resizing_left = true;
+                is_resizing_left = false;
             } else if (element.classList.contains('right')) {
-                is_resizing_right = true;
+                is_resizing_right = false;
             } else if (element.classList.contains('bar-wrapper')) {
-                is_dragging = true;
+                is_dragging = false;
             }
 
             bar_wrapper.classList.add('active');
